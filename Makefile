@@ -17,7 +17,7 @@ build/yaml/yaml.luvit: build/yaml $(OBJS)
 
 build/yaml:
 	mkdir -p build
-	wget http://files.luaforge.net/releases/yaml/yaml/$(VERSION)/yaml-$(VERSION).tar.gz -O - | tar -xzpf - -C build
+	wget -qct3 http://files.luaforge.net/releases/yaml/yaml/$(VERSION)/yaml-$(VERSION).tar.gz -O - | tar -xzpf - -C build
 	mv build/yaml-$(VERSION) $@
 
 clean:
