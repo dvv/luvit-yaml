@@ -1,4 +1,4 @@
-local YAML = require './yaml'
+local YAML = require './build/yaml/yaml'
 _G.yaml = nil
 return {
   encode = YAML.dump,
