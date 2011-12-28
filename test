@@ -1,6 +1,6 @@
 #!/usr/bin/env luvit
 
-local YAML = require('./')
+local YAML = require('yaml')
 assert(not _G.yaml)
 assert(YAML.encode)
 assert(YAML.decode)
