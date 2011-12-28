@@ -13,7 +13,7 @@ CFLAGS  += -I$(LUA_DIR) -I$(ROOT)/build/yaml
 OBJS    := $(addprefix build/yaml/,lyaml.o api.o dumper.o emitter.o loader.o parser.o reader.o scanner.o writer.o b64.o)
 
 build/yaml/yaml.luvit: build/yaml $(OBJS)
-	$(CC) -shared -o $@ $(OBJS)
+	$(CC) ${LDFLAGS} ${CFLAGS} -shared -o $@ $(OBJS)
 
 build/yaml:
 	mkdir -p build
