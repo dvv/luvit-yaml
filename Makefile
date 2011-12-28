@@ -23,5 +23,8 @@ build/yaml:
 clean:
 	rm -fr build
 
+test:
+	luvit test.lua
+
 .PHONY: all module clean
 .SILENT:
